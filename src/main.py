@@ -17,25 +17,6 @@ def health_check_handler():
     return {"ping": "pong"}
 
 
-todo_data = {
-    1: {
-        "id": 1,
-        "contents": "실전! hello FastAPI",
-        "is_done": True,
-    },
-    2: {
-        "id": 2,
-        "contents": "실전! FastAPI",
-        "is_done": False,
-    },
-    3: {
-        "id": 3,
-        "contents": "실전! FastAPI",
-        "is_done": True,
-    },
-}
-
-
 @app.post("/todos", status_code=201)
 def create_todo_handler(
         request: CreateToDoRequest,
